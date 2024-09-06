@@ -1,4 +1,4 @@
-## Declaration of Independent Work
+# Declaration of Independent Work
 
 I [nina-1074862], hereby declare that all coding assignments submitted by me have been completed independently, without assistance from others. I have not copied or used any code from external sources without proper citation. I have made this effort to accelerate my learning process in Python and to adhere to the academic integrity guidelines.
 
