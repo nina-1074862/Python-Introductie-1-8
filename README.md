@@ -1,5 +1,6 @@
-FYI: Ik (nina-1074862) Heb alle opdrachten waarbij je moest coderen zelf gemaakt, niet met behulp van anderen.
-Ik heb geen code gestolen of gepakt zonder te vermelden, dit heb ik gedaan om mijn leerproces van Python te versnellen en omdat het natuurlijk niet toegestaan is.
+## Declaration of Independent Work
+
+I [nina-1074862], hereby declare that all coding assignments submitted by me have been completed independently, without assistance from others. I have not copied or used any code from external sources without proper citation. I have made this effort to accelerate my learning process in Python and to adhere to the academic integrity guidelines.
 
 # Python lessen IT-Domein
 ## Python 1
