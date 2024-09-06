@@ -37,25 +37,51 @@ else:
 # Opdracht: Maak een Python programma die onderstaande flowchart implementeert. Van alle elipsen/ronde/rechthoek symbolen print je de tekst van de flowchart. De diamanten zijn je if statements, waar je aan de gebruiker een input vraagt. Bijvoorbeeld: yes of no antwoord.
 
 print("Patient exposed to TB")
-adult_child = input('Is the patient an adult or a child? [Adult/Child]')
-if adult_child == ("Adult" or "ADULT" or "adult"):
-    common_tb_symptoms = input("Has common TB symptoms? [Yes/No]")
-    if common_tb_symptoms == ("YES" or "yes" or "Yes"):
-        print("Treat as likely TB patient and perform full TB exam")
+adult_or_child = input('Is the patient an adult or a child? [Adult/Child] ')
 
-    elif common_tb_symptoms == ("NO" or "No" or "NO"):
-        print("Have patient report back if unwell; return in 1 month for checkup")
+if adult_or_child in ["Adult", "ADULT", "adult"]:
+    common_tb_symptoms = input('Has common TB symptoms? [Yes/No]')
+
+    if common_tb_symptoms in ["YES", "yes", "Yes"]:
+        print("Treat as likely TB patient and perform full TB exam.")
+
+    elif common_tb_symptoms in ["NO", "No", "no"]:
+        print("Have patient report back if unwell, return in 1 month for checkup.")
 
     else:
-        print("Incorrect input, please try again")
+        print("Abort, unknown input.")
         exit()
-    
-elif adult_child == ("Child" or "CHILD" or "child"):
-    print("Can TB test be given? [Yes/No]")
 
+elif adult_or_child in ["Child" , "CHILD" , "child"]:
+    tb_test_given = input("Can TB test be given? [Yes/No]")
+
+    if tb_test_given in ["YES" , "yes" , "Yes"]:
+        print("Administer TB test.")
+        print("Assess TB test results and child's condition.")
+
+    elif tb_test_given in ["NO" , "No" , "no"]:
+        child_health = input("Is the child feeling well? [Yes/No]")
+
+
+        if child_health in ["Yes" , "YES" , "yes"]:
+            print("6 months preventive isoniazide.")
+            print("Have parent bring in if child shows any symptoms.")
+
+        elif child_health in ["No" , "NO" , "no"]:
+            print("Take full history Examine for TB.")
+            print("If TB likely diagnosis, treat for TB.")
+            print("If other diagnosis more likely, treat as needed and watch for TB symptoms.")
+
+        else:
+            print("Abort, unknown input.")
+            exit()
+    else:
+        print("Abort, unknown input.")
+        exit()
 else:
-    print("Incorrect Input, please try again")
+    print("Abort, unknown input.")
     exit()
 
-
+# Flowchart
+# Maak een Python programma die onderstaande flowchart implementeert. Van alle elipsen/ronde/rechthoek/rechthoekgolf symbolen print je de tekst van de flowchart. De diamanten zijn je if statements, waar je aan de gebruiker een input vraagt. Bijvoorbeeld: yes of no antwoord.
 
