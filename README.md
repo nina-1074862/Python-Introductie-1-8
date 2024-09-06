@@ -1,3 +1,6 @@
+- FYI: Ik (nina-1074862) Heb alle opdrachten waarbij je moest coderen zelf gemaakt, niet met behulp van anderen.
+- Ik heb geen code gestolen of gepakt zonder te vermelden, dit heb ik gedaan om mijn leerproces van Python te versnellen en omdat het natuurlijk niet toegestaan is.
+
 # Python lessen IT-Domein
 ## Python 1
 De website voor de Python lessen met filmpjes is te vinden op [https://project.hosted.hr.nl/rac/it/python/](https://project.hosted.hr.nl/rac/it/python/)
@@ -63,6 +66,3 @@ Waarschijnlijk lees je deze tekst nu op github.com. Het is makkelijker voor jeze
 ![pycharm_zonder_project.png](Opdrachten%2FImages%2Fpycharm_zonder_project.png)
 
 Probeer voor het opslaan op jouw lokale systeem een generieke map te maken voor alle projecten. Er zullen er dit jaar nog een hoop meer volgen. 
-
-3) Pycharm bied je alle gereedschappen om gemakkelijk te werken met deze opdrachten. Open het bestand README.md. Met een rechter-muis klik op het tabblad kun je "Split right" kiezen om deze README.md naast je editor te tonen. Zo kun je daarnaast aan de opdrachten werken:
-![pycharm_screen.png](Opdrachten%2FImages%2Fpycharm_screen.png)
