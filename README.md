@@ -1,5 +1,5 @@
-## FYI: Ik (nina-1074862) Heb alle opdrachten waarbij je moest coderen zelf gemaakt, niet met behulp van anderen.
-## Ik heb geen code gestolen of gepakt zonder te vermelden, dit heb ik gedaan om mijn leerproces van Python te versnellen en omdat het natuurlijk niet toegestaan is.
+FYI: Ik (nina-1074862) Heb alle opdrachten waarbij je moest coderen zelf gemaakt, niet met behulp van anderen.
+Ik heb geen code gestolen of gepakt zonder te vermelden, dit heb ik gedaan om mijn leerproces van Python te versnellen en omdat het natuurlijk niet toegestaan is.
 
 # Python lessen IT-Domein
 ## Python 1
