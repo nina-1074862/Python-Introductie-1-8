@@ -38,3 +38,24 @@ else:
 
 print("Patient exposed to TB")
 adult_child = input('Is the patient an adult or a child? [Adult/Child]')
+if adult_child == ("Adult" or "ADULT" or "adult"):
+    common_tb_symptoms = input("Has common TB symptoms? [Yes/No]")
+    if common_tb_symptoms == ("YES" or "yes" or "Yes"):
+        print("Treat as likely TB patient and perform full TB exam")
+
+    elif common_tb_symptoms == ("NO" or "No" or "NO"):
+        print("Have patient report back if unwell; return in 1 month for checkup")
+
+    else:
+        print("Incorrect input, please try again")
+        exit()
+    
+elif adult_child == ("Child" or "CHILD" or "child"):
+    print("Can TB test be given? [Yes/No]")
+
+else:
+    print("Incorrect Input, please try again")
+    exit()
+
+
+
