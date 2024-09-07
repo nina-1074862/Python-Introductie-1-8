@@ -19,7 +19,7 @@ if data_users == ("Wifi open" or "wifi open" or "WIFI OPEN"):
 
 else:
     print("Unknown input, there won't be any connection")
-    (exit)
+    exit()
 
 # Vergelijken met een sub-string
 # Controleren of een string als een substring in een string zit doe je middels het keyword in. Bijvoorbeeld:
@@ -85,3 +85,44 @@ else:
 # Flowchart
 # Maak een Python programma die onderstaande flowchart implementeert. Van alle elipsen/ronde/rechthoek/rechthoekgolf symbolen print je de tekst van de flowchart. De diamanten zijn je if statements, waar je aan de gebruiker een input vraagt. Bijvoorbeeld: yes of no antwoord.
 
+print("Shopping Cart")
+payment_method = input("Payment Method? Online/Offline ")
+
+if payment_method.upper() == "ONLINE":
+    print("Online, Place Purchase Order")
+    admin_user = input("Admin User? ")
+    if admin_user.upper() == "YES":
+        print("Enter payment details")
+        print("Place Order")
+
+    elif admin_user.upper() == "NO":
+        approval_rules = input("Approval Rules")
+        if approval_rules.upper() == "APPROVED":
+            print("Enter payment details.")
+            print("Place Order.")
+        elif approval_rules.upper() == "REJECTED":
+            print("Purchase Order Rejected")
+
+        else:
+            print("Abort, Unknown input.")
+            exit()
+
+    else:
+        print("Abort, Unknown input.")
+        exit()
+
+elif payment_method.upper() == "OFFLINE":
+    print("Place Purchase Order")
+    admin_user = input("Admin User? ")
+    if admin_user.upper() == "YES":
+        print("Order Created Automatically")
+    elif admin_user.upper() == "NO":
+        approval_rules = input("Approval Rules")
+        if approval_rules.upper() == "APPROVED":
+            print("Order Created Automatically")
+        elif approval_rules.upper() == "REJECTED":
+            print("Purchase Order Rejected")
+
+else:
+    print("Abort, Unknown input.")
+    exit()
