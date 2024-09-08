@@ -90,38 +90,98 @@ payment_method = input("Payment Method? Online/Offline ")
 
 if payment_method.upper() == "ONLINE":
     print("Online, Place Purchase Order")
-    admin_user = input("Admin User? ")
+    admin_user = input("Admin User? [Yes/No] ")
     if admin_user.upper() == "YES":
         print("Enter payment details")
         print("Place Order")
 
     elif admin_user.upper() == "NO":
-        approval_rules = input("Approval Rules")
+        approval_rules = input("Approval Rules? [Approved/Rejected]")
         if approval_rules.upper() == "APPROVED":
             print("Enter payment details.")
             print("Place Order.")
         elif approval_rules.upper() == "REJECTED":
-            print("Purchase Order Rejected")
-
+            print("Purchase Order rejected.")
         else:
             print("Abort, Unknown input.")
             exit()
-
     else:
         print("Abort, Unknown input.")
         exit()
 
 elif payment_method.upper() == "OFFLINE":
-    print("Place Purchase Order")
-    admin_user = input("Admin User? ")
+    print("Offline, Place Purchase Order")
+
+    admin_user = input("Admin User? [Yes/No]  ")
     if admin_user.upper() == "YES":
         print("Order Created Automatically")
     elif admin_user.upper() == "NO":
-        approval_rules = input("Approval Rules")
+        approval_rules = input("Approval Rules? [Approved/Rejected]")
         if approval_rules.upper() == "APPROVED":
-            print("Order Created Automatically")
+            print("Order Created automatically.")
+            exit()
         elif approval_rules.upper() == "REJECTED":
             print("Purchase Order Rejected")
+            exit()
+        else:
+            print("Abort, Unknown input.")
+            exit()
+else:
+    print("Abort, Unknown input.")
+    exit()
+
+# Bestellen
+# Eten bestellen bij de Mac Donald's. Maak een programma die aan de gebruiker de bestelling vraagt. De gebruiker kan slechts 1 keuze maken. Dat wil zeggen dat hij/zij slechts 1 burger of 1 drankje kan kiezen. De volgende vragen stel je aan de gebruiker:
+
+# Hier opeten of meenemen?
+# Burgers of drankjes?
+    # Burgers:
+        # Hamburger
+        # Cheese burger
+        # Big Mac
+        # Quarter Pounder met of zonder kaas?
+    # Drankjes:
+        # Warme of koude drankjes:
+            # Warme drankjes:
+            # Koffie
+            # Cappucino
+            # Chocolademelk
+        # Koude drankjes:
+            # Coca Cola
+            # Cola Zero
+            # 7-up
+            # Fanta
+            # Fristi
+# Elke keer als de gebruiker een bestelling kiest geef je deze op het scherm weer. Als de gebruiker "hier op eten" heeft gekozen, dan zeg je aan het einde: "Bedankt voor uw bestelling en eet smakelijk in ons restaurant." Als de gebruiker "Meenemen" heeft gekozen, dan zeg je aan het einde: "Bedankt voor uw bestelling, goede reis en eet smakelijk."
+
+print("Welkom bij de Mac Donald's ")
+takeaway_or_restaurant = input("Hier opeten of meenemen? [Opeten/Meenemen]: ")
+
+if takeaway_or_restaurant.upper() == "OPETEN":
+    print("Hier opeten")
+    burgers_drankjes = input("Burgers of drankjes? [Burgers/Drankjes]: ")
+
+    if burgers_drankjes.upper() == "BURGERS":
+        burger_menu = input("Burgers [Hamburger, Cheeseburger, Big Mac, Quarter Pounder]: ")
+        burger_menu_choice = ["HAMBURGER", "CHEESEBURGER", "BIG MAC", "QUARTER POUNDER"]
+
+        if burger_menu.upper() in burger_menu_choice:
+            print(burger_menu.title())
+            print("Bedankt voor uw bestelling en eetsmakelijk in ons restaurant.")
+            exit()
+        else:
+            print("Abort, Unknown input.")
+            exit()
+
+    elif burgers_drankjes.upper() == "DRANKJES":
+        print("Drankjes [Warm/Koud]?")
+
+    else:
+        print("Abort, Unknown input.")
+        exit()
+
+elif takeaway_or_restaurant.upper() == "MEENEMEN":
+    print("2")
 
 else:
     print("Abort, Unknown input.")
