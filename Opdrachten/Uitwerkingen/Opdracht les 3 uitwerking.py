@@ -157,6 +157,7 @@ else:
 print("Welkom bij de Mac Donald's ")
 takeaway_or_restaurant = input("Hier opeten of meenemen? [Opeten/Meenemen]: ")
 
+# FOR EATING AT THE RESTAURANT
 if takeaway_or_restaurant.upper() == "OPETEN":
     print("Hier opeten")
     burgers_drankjes = input("Burgers of drankjes? [Burgers/Drankjes]: ")
@@ -167,7 +168,7 @@ if takeaway_or_restaurant.upper() == "OPETEN":
 
         if burger_menu.upper() in burger_menu_choice:
             print(burger_menu.title())
-            print("Bedankt voor uw bestelling en eetsmakelijk in ons restaurant.")
+            print("Bedankt voor uw bestelling en eet smakelijk in ons restaurant.")
             exit()
         else:
             print("Abort, Unknown input.")
@@ -180,8 +181,54 @@ if takeaway_or_restaurant.upper() == "OPETEN":
         print("Abort, Unknown input.")
         exit()
 
+# FOR TAKEAWAY AT MCDONALD'S
 elif takeaway_or_restaurant.upper() == "MEENEMEN":
-    print("2")
+    print("Meenemen")
+    burgers_drankjes = input("Burgers of drankjes? [Burgers/Drankjes]: ")
+    # FOR BURGERS
+    if burgers_drankjes.upper() == "BURGERS":
+        burger_menu = input("Burgers [Hamburger, Cheeseburger, Big Mac, Quarter Pounder]: ")
+        burger_menu_choice = ["HAMBURGER", "CHEESEBURGER", "BIG MAC", "QUARTER POUNDER"]
+
+        if burger_menu.upper() in burger_menu_choice:
+            print(burger_menu.title())
+            print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
+            exit()
+
+        else:
+            print("Abort, Unknown input.")
+            exit()
+
+    # FOR DRINKS
+    if burgers_drankjes.upper() == "DRANKJES":
+        koud_of_warm = input("Drankjes [Warme/Koude]: ")
+
+        if koud_of_warm.upper() == "WARME":
+            drinks_menu_warm = input("Warme Drankjes [Koffie, Cappuccino, Chocolademelk]: ")
+            drinks_menu_warm_choice = ["KOFFIE", "CAPPUCCINO", "CHOCOLADEMELK"]
+
+            if drinks_menu_warm.upper() in drinks_menu_warm_choice:
+                print(drinks_menu_warm.title())
+                print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
+                exit()
+
+        elif koud_of_warm.upper() == "KOUDE":
+            drinks_menu_cold = input("Koude Drankjes [Coca Cola, Cola Zero, 7-Up, Fanta, Fristi]: ")
+            drinks_menu_cold_choice = ["COCA COLA", "COLA ZERO", "7-UP", "FANTA", "FRISTI"]
+
+            if drinks_menu_cold.upper() in drinks_menu_cold_choice:
+                print(drinks_menu_cold.title())
+                print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
+                exit()
+
+
+        else:
+            print("Abort, Unknown input.")
+            exit()
+
+    else:
+        print("Abort, Unknown input.")
+        exit()
 
 else:
     print("Abort, Unknown input.")
