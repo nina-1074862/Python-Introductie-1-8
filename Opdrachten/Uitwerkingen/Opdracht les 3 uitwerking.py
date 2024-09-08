@@ -161,7 +161,7 @@ takeaway_or_restaurant = input("Hier opeten of meenemen? [Opeten/Meenemen]: ")
 if takeaway_or_restaurant.upper() == "OPETEN":
     print("Hier opeten")
     burgers_drankjes = input("Burgers of drankjes? [Burgers/Drankjes]: ")
-
+    # FOR BURGERS AT THE RESTAURANT
     if burgers_drankjes.upper() == "BURGERS":
         burger_menu = input("Burgers [Hamburger, Cheeseburger, Big Mac, Quarter Pounder]: ")
         burger_menu_choice = ["HAMBURGER", "CHEESEBURGER", "BIG MAC", "QUARTER POUNDER"]
@@ -170,13 +170,19 @@ if takeaway_or_restaurant.upper() == "OPETEN":
             print(burger_menu.title())
             print("Bedankt voor uw bestelling en eet smakelijk in ons restaurant.")
             exit()
-        else:
-            print("Abort, Unknown input.")
-            exit()
 
+    # FOR DRINKS AT THE RESTAURANT
     elif burgers_drankjes.upper() == "DRANKJES":
-        print("Drankjes [Warm/Koud]?")
+        koud_of_warm = input("Drankjes [Warme/Koude]: ")
 
+        if koud_of_warm.upper() == "WARME":
+            drinks_menu_warm = input("Warme Drankjes [Koffie, Cappuccino, Chocolademelk]: ")
+            drinks_menu_warm_choice = ["KOFFIE", "CAPPUCCINO", "CHOCOLADEMELK"]
+
+            if drinks_menu_warm.upper() in drinks_menu_warm_choice:
+                print(drinks_menu_warm.title())
+                print("Bedankt voor uw bestelling en eet smakelijk in ons restaurant.")
+                exit()
     else:
         print("Abort, Unknown input.")
         exit()
@@ -200,7 +206,7 @@ elif takeaway_or_restaurant.upper() == "MEENEMEN":
             exit()
 
     # FOR DRINKS
-    if burgers_drankjes.upper() == "DRANKJES":
+    elif burgers_drankjes.upper() == "DRANKJES":
         koud_of_warm = input("Drankjes [Warme/Koude]: ")
 
         if koud_of_warm.upper() == "WARME":
@@ -212,6 +218,10 @@ elif takeaway_or_restaurant.upper() == "MEENEMEN":
                 print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
                 exit()
 
+            else:
+                print("Abort, Unknown input.")
+                exit()
+
         elif koud_of_warm.upper() == "KOUDE":
             drinks_menu_cold = input("Koude Drankjes [Coca Cola, Cola Zero, 7-Up, Fanta, Fristi]: ")
             drinks_menu_cold_choice = ["COCA COLA", "COLA ZERO", "7-UP", "FANTA", "FRISTI"]
@@ -220,16 +230,15 @@ elif takeaway_or_restaurant.upper() == "MEENEMEN":
                 print(drinks_menu_cold.title())
                 print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
                 exit()
-
-
+            else:
+                print("Abort, Unknown input.")
+                exit()
         else:
             print("Abort, Unknown input.")
             exit()
-
     else:
         print("Abort, Unknown input.")
         exit()
-
 else:
     print("Abort, Unknown input.")
     exit()
