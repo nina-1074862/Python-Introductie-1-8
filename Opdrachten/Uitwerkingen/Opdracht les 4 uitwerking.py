@@ -102,5 +102,44 @@ print(f"De index van computer leverancier {aantal_comp_leveranciers[5]} is {inde
 
 # Dictionary
 # Een heel belangrijk datatype is de "dictionary", in andere talen ook wel een "map" of "object" genoemd. Hierin kun je key/value pairs opslaan. Een key is een unieke waarde die je gebruikt om een value op te halen. Een value is een waarde die je opslaat in de dictionary. Een dictionary maak je met behulp van accolades.
+dictionary = {"key": "value"}
+print(dictionary)
+print(dictionary["key"])
+dictionary["key"] = ("new value")
+print(dictionary["key"])
+dictionary["new key"] = "new value"
+print(dictionary)
 
+# Dictionaries hebben heel veel operaties en zul je veel gebruiken in alle talen.
+# Gegeven een dictionary met telefoonnummers uit films (naam van de film is de key, het nummer de value):
+    # The Simpsons, 636-555-3226
+    # Vegas Vacation, 555-0100
+    # Ghostbusters, 555-23678
+    # Billy Madison, 555-0840
+    # Swingers, 213-555-4679
+    # Bruce Almighty, 555-0123
+    # Seinfeld, 555-FILK
+    # Arrested Development, 555-0113
+    # Die Hard With a Vengeance, 555-0001
+    # The A-Team, 555-6162
 
+# Opdrachten
+# Zet bovenstaande lijst in een python dictionary. Handel daarna de volgende acties af in je code:
+dictionary = {'The Simpsons': '636-555-3226', 'Vegas Vacation': '555-0100', 'Ghostbusters': '555-23678', 'Billy Madison': '555-0840', 'Swingers': '213-555-4679', 'Bruce Almighty': '555-0123', 'Seinfeld': '555-FILK', 'Arrested Development': '555-0113', 'Die Hard With a Vengeance': '555-0001', 'The A-Team': '555-6162'}
+print(dictionary)
+
+# [a] Geef het telefoonnummer van Bruce Almighty in de volzin: "Het telefoonnummer van Bruce Almighty is [telefoonnummer]."
+dictionary = {"film": "phone-number"}
+print(dictionary)
+dictionary["film"] = "Bruce Almighty"
+dictionary["phone-number"] = "555-0123"
+
+print(f"Het telefoonnummer van {dictionary['film']} is {dictionary['phone-number']}")
+
+# [b] Voeg het telefoonnummer van de Harry Potter toe, nummer: 605-475-6961 aan de dictionary.
+
+# [c] Pas het telefoonnummer van de Ghostbusters aan. Dit moet zijn 555-2368. Geef in een volzin weer. "Het telefoonnummer [telefoonnummer] van de Ghostbusters is gewijzigd naar [nieuwe nummer]."
+
+# [d] Verwijder het telefoonnummer van Seinfeld. Gebruik de volzin: "Telefoonnummer [telefoonnummer] van Seinfeld is verwijderd."
+
+# [e] Geef aan hoeveel telefoonnummers er nu in dictionary zitten. Gebruik de volzin: "In de dictionary zitten [aantal telefoonnummers] telefoonnummers."
