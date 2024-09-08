@@ -61,5 +61,36 @@ popular_games_2021 = tuple(popular_games_list)
 
 print({popular_games_2021[7]})
 
+# Tuple
+# Tuples zijn vergelijkbaar met lists. Ze zijn echter niet meer wijzigbaar nadat ze zijn aangemaakt. Om een tuple te maken gebruik je ronde haakjes in plaats van vierkante haakjes.
+
+# Create a tuple
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)
+# Tuples zijn niet wijzigbaar
+my_tuple[0] = 6 # Geeft een error
+
+# Gegeven een lijst met computer leveranciers
+    # Apple
+    # Asus
+    # Dell
+    # Lenovo
+    # Acer
+    # Samsung
+    # MSI
+    # Hewlett - Packard(HP)
+    # Toshiba
+    # Microsoft
+    # Chuwi
+    # Sony
+
+# Opdracht
+# Maak een Python programma waarin de computer leveranciers in een tuple worden opgeslagen. Na elke opdracht geef je de tuple op het scherm weer.
+aantal_comp_leveranciers = ('Apple', 'Asus', 'Dell', 'Lenovo', 'Acer', 'Samsung', 'MSI', 'Hewlett - Packard (HP)', 'Toshiba', 'Microsoft', 'Chuwi', 'Sony')
+# [a] Geef in een volzin het aantal computer leveranciers in de tuple. "De tuple bevat [aantal computer leveranciers] computer leveranciers."
+print(f"De tuple bevat {len(aantal_comp_leveranciers)} computer leveranciers")
+# [b] Geef in een volzin het aantal karakters van computer leverancier nummer 8; "De naam van [Naam computer leverancier] bestaat uit [aantal karakters] karakters."
+
+# [c] Geef de naam van de computer leverancier op de 10de plaats
 
 
