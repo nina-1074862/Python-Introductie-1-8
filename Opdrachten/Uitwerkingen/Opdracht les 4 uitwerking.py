@@ -86,11 +86,21 @@ my_tuple[0] = 6 # Geeft een error
 
 # Opdracht
 # Maak een Python programma waarin de computer leveranciers in een tuple worden opgeslagen. Na elke opdracht geef je de tuple op het scherm weer.
-aantal_comp_leveranciers = ('Apple', 'Asus', 'Dell', 'Lenovo', 'Acer', 'Samsung', 'MSI', 'Hewlett - Packard (HP)', 'Toshiba', 'Microsoft', 'Chuwi', 'Sony')
+aantal_comp_leveranciers = ('Apple', 'Asus', 'Dell', 'Lenovo', 'Acer', 'Samsung', 'MSI', 'Hewlett-Packard (HP)', 'Toshiba', 'Microsoft', 'Chuwi', 'Sony')
+print(aantal_comp_leveranciers)
+
 # [a] Geef in een volzin het aantal computer leveranciers in de tuple. "De tuple bevat [aantal computer leveranciers] computer leveranciers."
 print(f"De tuple bevat {len(aantal_comp_leveranciers)} computer leveranciers")
+print(aantal_comp_leveranciers)
+
 # [b] Geef in een volzin het aantal karakters van computer leverancier nummer 8; "De naam van [Naam computer leverancier] bestaat uit [aantal karakters] karakters."
+print(f"De naam van {aantal_comp_leveranciers[7]} bestaat uit {len(aantal_comp_leveranciers[7])} karakters.")
 
 # [c] Geef de naam van de computer leverancier op de 10de plaats
+index = aantal_comp_leveranciers.index('Samsung')
+print(f"De index van computer leverancier {aantal_comp_leveranciers[5]} is {index}")
+
+# Dictionary
+# Een heel belangrijk datatype is de "dictionary", in andere talen ook wel een "map" of "object" genoemd. Hierin kun je key/value pairs opslaan. Een key is een unieke waarde die je gebruikt om een value op te halen. Een value is een waarde die je opslaat in de dictionary. Een dictionary maak je met behulp van accolades.
 
 
