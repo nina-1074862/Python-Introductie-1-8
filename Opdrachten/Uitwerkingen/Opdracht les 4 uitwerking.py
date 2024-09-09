@@ -126,28 +126,38 @@ print(dictionary)
 # Opdrachten
 # Zet bovenstaande lijst in een python dictionary. Handel daarna de volgende acties af in je code:
 dictionary = {'The Simpsons': '636-555-3226', 'Vegas Vacation': '555-0100', 'Ghostbusters': '555-23678', 'Billy Madison': '555-0840', 'Swingers': '213-555-4679', 'Bruce Almighty': '555-0123', 'Seinfeld': '555-FILK', 'Arrested Development': '555-0113', 'Die Hard With a Vengeance': '555-0001', 'The A-Team': '555-6162'}
-print(dictionary)
+print("\n",dictionary)
 
 # [a] Geef het telefoonnummer van Bruce Almighty in de volzin: "Het telefoonnummer van Bruce Almighty is [telefoonnummer]."
-dictionary = {"film": "phone-number"}
+print("\n",f"Het telefoonnummer van Bruce Almighty is {dictionary['Bruce Almighty']}.")
 print(dictionary)
-dictionary["film"] = "Bruce Almighty"
-dictionary["phone-number"] = "555-0123"
-
-print(f"Het telefoonnummer van {dictionary['film']} is {dictionary['phone-number']}")
 
 # [b] Voeg het telefoonnummer van de Harry Potter toe, nummer: 605-475-6961 aan de dictionary.
-dictionary = {'The Simpsons': '636-555-3226', 'Vegas Vacation': '555-0100', 'Ghostbusters': '555-23678', 'Billy Madison': '555-0840', 'Swingers': '213-555-4679', 'Bruce Almighty': '555-0123', 'Seinfeld': '555-FILK', 'Arrested Development': '555-0113', 'Die Hard With a Vengeance': '555-0001', 'The A-Team': '555-6162'}
-print(dictionary)
-# Adding Harry Potter and the Phone number
+# Adding Harry Potter to the dictionary
 dictionary['Harry Potter'] = '605-475-6961'
-print(dictionary)
+print("\n",dictionary)
 
 # [c] Pas het telefoonnummer van de Ghostbusters aan. Dit moet zijn 555-2368. Geef in een volzin weer. "Het telefoonnummer [telefoonnummer] van de Ghostbusters is gewijzigd naar [nieuwe nummer]."
-print(f"Het telefoonnummer {dictionary['phone-number']} van de {dictionary['film']} is gewijzigd naar {dictionary['nieuwe-nummer']}. ")
+old_number_ghostbusters = dictionary['Ghostbusters']
+
 # Changing the phone number of Ghostbusters
-dictionary ['Ghostbusters'] = '555-2368'
+dictionary['Ghostbusters'] = '555-2368'
+
+# Saving the new number
+new_number_ghostbusters = dictionary['Ghostbusters']
+
+print("\n",f"Het telefoonnummer {old_number_ghostbusters} van de Ghostbusters is gewijzigd naar {new_number_ghostbusters}.")
 print(dictionary)
+
 # [d] Verwijder het telefoonnummer van Seinfeld. Gebruik de volzin: "Telefoonnummer [telefoonnummer] van Seinfeld is verwijderd."
+old_number_seinfeld = dictionary['Seinfeld']
+
+# Verwijder Seinfeld
+del dictionary['Seinfeld']
+
+print("\n",f"Telefoonnummer {old_number_seinfeld} van Seinfeld is verwijderd. ")
+print(dictionary)
 
 # [e] Geef aan hoeveel telefoonnummers er nu in dictionary zitten. Gebruik de volzin: "In de dictionary zitten [aantal telefoonnummers] telefoonnummers."
+print("\n",f"In de dictionary zitten {len(dictionary)} telefoonnummers.")
+print(dictionary)
