@@ -1,4 +1,4 @@
-# Opdracht Les 2 Uitwerking (nina-1074862) FYI I haven't worked with python in months so pls don't laugh lmao
+# Opdracht Les 2 Uitwerking
 
 # Opdracht: Onderstaand vind je diverse opdrachten waar je mee aan de slag kunt. Type de opdrachten altijd zelf, zodat je de Python syntax in de vingers krijgt. Bij gemaakte fouten ga je de errors herkennen en leer je sneller wat je moet doen om deze te herstellen. Type onderstaande opgaven in en kijk wat voor output je op het scherm krijgt. Pas een waarde aan en kijk wat het effect is. Dit zijn de basis dingen waar we later alles op gaan bouwen. Het is essentieel dat je deze zaken goed snapt.
 
