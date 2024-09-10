@@ -175,113 +175,101 @@ print_person(name='John', age=42, city='Rotterdam', country='Nederland')
 
 # Mijn uitwerking Opdracht: Refactoring
 # Ordering at Mac Donald's
-eat_in = False
-aborted = False
+# Bestelling bij de FastFood Restaurant
+dine_in = False
+cancelled = False
+
+SEPARATOR = "/"
+
+def format_valid_options(options):
+    # Formatteert de lijst met opties als een string om aan de gebruiker te tonen
+    if len(options) > 0:
+        options_text = " [" + SEPARATOR.join(options) + "]"
+    return options_text
 
 
-SEPERATOR_CHARACTER = "/"
-def get_valid_answer_text(valid_answers):
-    valid_answers_text = ""
-    if len(valid_answers) > 0:
-        # Deze regel kan simpeler, maar dit is duidelijker
-        # We kiezen er voor om de opties niet meteen in de "question" string mee te geven,
-        # maar de lijst met mogelijke antwoorden mee af te drukken als we de vraag stellen
-        valid_answers_text = " ["
-        for answer in valid_answers:
-            valid_answers_text = valid_answers_text + answer + SEPERATOR_CHARACTER
-        valid_answers_text = valid_answers_text[:-1]  # Deze regel verwijdert de laatste /
-        valid_answers_text = valid_answers_text + "]"
-    return valid_answers_text
+def ask_user(question, options=()):
+    # Maakt een lijst met de opties in hoofdletters
+    valid_options = [option.upper() for option in options]
+
+    # Stelt de vraag met beschikbare opties
+    full_question = question + format_valid_options(options) + ": "
+
+    # Blijf vragen tot een geldig antwoord wordt gegeven
+    user_input = ""
+    while user_input not in valid_options:
+        user_input = input(full_question).upper()
+
+    return user_input
 
 
-def ask_question(question, valid_answers=()):
-    valid_answers_upper = []
-    # Hier maken we alvast een lijst met de geldige antwoorden in hoofdletters
-    for answer in valid_answers:
-        valid_answers_upper.append(answer.upper())
-
-    # We bouwen de vraag op uit de vraagtekst en de geldige antwoorden (als die er zijn)
-    question_string = question
-    question_string = question_string + get_valid_answer_text(valid_answers)
-    question_string = question_string + ": "
-
-    # We blijven de vraag stellen tot we een geldig antwoord hebben
-    answer_str = ""
-    while answer_str not in valid_answers_upper:
-        answer_str = input(question_string)
-        answer_str = answer_str.upper()
-
-    # We geven het antwoord terug in hoofdletters
-    return answer_str
+def dine_in_or_takeout():
+    # Vraagt of de gebruiker in het restaurant wil eten of afhalen
+    dining_choice = ask_user("Eet je hier of neem je mee?", ["Hier", "Mee"])
+    if dining_choice == "HIER":
+        print("Eten in het restaurant")
+        return True
+    else:
+        print("Afhalen")
+        return False
 
 
-def eat_in_choice():
-    eat_in = False
-    question_1 = ask_question("Hier opeten of meenemen", ["Opeten", "Meenemen"])
-    if question_1 == "OPETEN":
-        # Eat in part
-        print("Hier opeten")
-        eat_in = True
-    elif question_1 == "MEENEMEN":
-        # Take away part
-        print("Meenemen")
-        eat_in = False
-    return eat_in
-
-
-def get_burger_choice():
-    question_3 = ask_question(
-        "Burgers", ["Hamburger", "Cheeseburger", "Big Mac", "Quarter Pounder"]
+def choose_burger():
+    # Laat de gebruiker een burger kiezen
+    burger_choice = ask_user(
+        "Welke burger wil je?", ["Hamburger", "Cheeseburger", "Big Mac", "Quarter Pounder"]
     )
-    if question_3 == "HAMBURGER":
-        print("Hamburger")
-    elif question_3 == "CHEESEBURGER":
-        print("Cheeseburger")
-    elif question_3 == "Big MAC":
-        print("Big Mac")
-    elif question_3 == "QUARTER POUNDER":
-        print("Quarter Pounder")
+    print(f"Je hebt gekozen voor een {burger_choice}")
 
 
-def get_warm_drink_choice():
-    question_5 = ask_question("Warme drank", ["Koffie", "Cappucino", "Chocolademelk"])
-    if question_5 == "KOFFIE":
-        print("Koffie")
-    elif question_5 == "CAPPUCINO":
-        print("Cappucino")
-    elif question_5 == "CHOCOLADEMELK":
-        print("Chocolademelk")
+def choose_hot_drink():
+    # Laat de gebruiker een warme drank kiezen
+    hot_drink_choice = ask_user("Welke warme drank wil je?", ["Koffie", "Cappuccino", "Chocolademelk"])
+    print(f"Je hebt gekozen voor een {hot_drink_choice}")
 
 
-def get_cold_drink_choice():
-    question_6 = ask_question(
-        "Koude drank ", ["Coca Cola", "Cola Zero", "7-Up", "Fanta", "Fristi"]
+def choose_cold_drink():
+    # Laat de gebruiker een koude drank kiezen
+    cold_drink_choice = ask_user(
+        "Welke koude drank wil je?", ["Coca Cola", "Cola Zero", "7-Up", "Fanta", "Fristi"]
     )
-    if question_6 == "COCA COLA":
-        print("Coca Cola")
-    elif question_6 == "COLA ZERO":
-        print("Cola Zero")
-    elif question_6 == "7-UP":
-        print("7-Up")
-    elif question_6 == "FANTA":
-        print("Fanta")
-    elif question_6 == "FRISTI":
-        print("Fristi")
+    print(f"Je hebt gekozen voor een {cold_drink_choice}")
 
 
-print("Welkom bij de Mac Donald's")
-eat_in = eat_in_choice()
-if eat_in:
-    food_answer = ask_question("Burgers of drankjes", ["Burgers", "Drankjes"])
-    if food_answer == "BURGERS":
-        get_burger_choice()
-    elif food_answer == "DRANKJES":
-        drink_choice = ask_question("Drankjes", ["Warme", "Koude"])
-        if drink_choice == "WARME":
-            get_warm_drink_choice()
-        elif drink_choice == "KOUDE":
-            get_cold_drink_choice()
-if eat_in:
-    print("Bedankt voor uw bestelling en eet smakelijk in ons restaurant.")
-else:
-    print("Bedankt voor uw bestelling, goede reis en eet smakelijk.")
+def place_order():
+    # Vraag of de gebruiker eten of drinken wil
+    order_type = ask_user("Wil je burgers of drankjes?", ["Burgers", "Drankjes"])
+    if order_type == "BURGERS":
+        choose_burger()
+    else:
+        # Vraag of de gebruiker warme of koude drank wil
+        drink_type = ask_user("Wil je warme of koude drank?", ["Warme", "Koude"])
+        if drink_type == "WARME":
+            choose_hot_drink()
+        else:
+            choose_cold_drink()
+
+
+# Hoofdprogramma
+def main():
+    print("Welkom bij MacDonald's")
+    dine_in = dine_in_or_takeout()
+
+    place_order()
+
+    if dine_in:
+        print("Bedankt voor je bestelling en geniet van je maaltijd in het restaurant.")
+    else:
+        print("Bedankt voor je bestelling, veilige reis en smakelijk eten!")
+
+
+# Start het programma
+if __name__ == "__main__":
+    main()
+
+# Mijn uitwerking Opdracht: Studenten rapport
+classes = dictionary['SWDVT-2023-1A', ]
+
+# Je kunt optioneel een dataset genereren met de code in generate_fake_students.py. Nadat je succesvol een bestand hebt weggeschreven importeer je het resultaat met het volgende commando boven in je Python bestand:
+# from students_classrooms import students_per_classroom
+
