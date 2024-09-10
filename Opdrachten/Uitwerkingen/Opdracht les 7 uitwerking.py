@@ -111,15 +111,95 @@ while True:
         print("Invalid Input")
         exit()
 
+# Functies met standaard waarden
+# Je kunt een functie argument een standaard waarde geven. Als je de functie aanroept zonder dat argument, dan wordt de standaard waarde gebruikt. Bijvoorbeeld:
+def print_hello(name='John'):
+    print(f'Hello {name}')
 
 
+print_hello()  # drukt "Hello John" af
+print_hello('Jane')  # drukt "Hello Jane" af
 
+# Opdracht: Rekenmachine met extra output
+# Pas de functies van de rekenmachine aan om een derde waarde te accepteren, "debug", met een standaard waarde van False. Als de waarde True is, druk dan naast het antwoord de hele som af én een waarschuwing als één van de getallen een 0 is. Bijvoorbeeld:
+add(1, 2, True) # drukt "Debug: 1 + 2" en daarna "3" af
+add(1, 2) # drukt "3" af
+# Voeg een vraag toe voor de gebruiker om te vragen of hij debug informatie wil zien.
 
+# Functie met return waarde
+# Een functie kan een waarde teruggeven. Dit doe je met het return statement. Bijvoorbeeld:
+def add(a, b):
+    return a + b
 
+result = add(1, 2)
+print(result)
 
+# Functie argumenten op naam
+# Wat in praktijk veel zal gebeuren is dat je een functie aanroept met een heleboel argumenten. Bijvoorbeeld:
+def print_person(name, age, city, country):
+    print(f'{name} is {age} jaar oud en woont in {city}, {country}')
 
+print_person('John', 42, 'Rotterdam', 'Nederland')
 
+# Lastig is dat als je nu in jouw functie een extra argument toevoegt, "achternaam" bijvoorbeeld, dat je al je functie aanroepen moet aanpassen. Dat is niet handig. En dat niet alleen, op een gegeven moment weet je niet meer welke volgorde de argumenten hebben. Dat is niet handig.
 
+# Je kunt argumenten ook op naam meegeven. Bijvoorbeeld:
+def print_person(name, age, city, country):
+    print(f'{name} is {age} jaar oud en woont in {city}, {country}')
+
+print_person(name='John', age=42, city='Rotterdam', country='Nederland')
+
+# ..als we nu een extra argument toevoegen, dan hoeven we de aanroep niet aan te passen.
+
+# Opdracht: Refactoring
+# "Refactoring" is een kreet die je nog veel zult tegenkomen. Refactoring slaat op het herschrijven van code, zonder dat de input of output verandert. Dat doe je vaak omdat je de code beter leesbaar wilt maken, of omdat je de code wilt hergebruiken.
+
+# We gaan de code van een vorige opdracht refactoren. Als je onze uitwerking bekijkt van Les3_Source5.py zijn daar een paar zaken niet heel netjes:
+
+# We vragen gebruikers steeds te kiezen uit een aantal zaken ("KOUD of WARM"), maar die keuze dwingen we niet af. Je kunt nog steeds "LAUW" invoeren waar "KOUD" of "WARM" verwacht wordt. We willen die keuze afdwingen, dat kan bijvoorbeeld met een while loop:
+answer = ""
+while answer != "KOUD" and answer != "WARM":
+    answer = input("Wil je warme of koude drank? (KOUD/WARM) ")
+# Je ziet een aantal regels code rondom vragen steeds terugkomen. Maak een aparte functie die vragen kan stellen en het antwoord terug geeft als return, met controle op de antwoorden zoals hierboven beschreven. Bijvoorbeeld:
+def ask_question(question, valid_answers):
+    ...
+    return answer
+# We hebben keuzes die leiden tot andere keuzes, waardoor we een hele lange lap code krijgen. We willen overzicht krijgen door de code op te splitsen in functies voor in het restaurant eten / meenemen, voor de burgers keuze, voor warme drankjes en een functie voor koude drankjes. De uiteindelijke code zou er dan ongeveer zo uit kunnen zien:
+    food_answer = ask_question("Burgers of drankjes?", ["Burgers", "Drankjes"])
+    if food_answer == "BURGERS":
+        get_burger_choice()
+    elif food_answer == "DRANKJES":
+        drink_choice = ask_question("Drankjes", ["Warme", "Koude"])
+# Neem de oude code en refactor deze, waarbij je bovenstaande drie verbeteringen doorvoert.
+
+# Opdracht: Studenten rapport
+# In deze opdracht gaan we lijsten, dictionaries en functies combineren. We gaan een programma maken dat een rapport afdrukt van een aantal studenten. Van een student heb je de volgende informatie:
+
+# Iedere student zit in één klas, bijvoorbeeld "SWDVT-2023-1A". Niet alle klassen zijn even groot.
+# Iedere student heeft 4 werkplaats vakken (WP1, WP2, WP3 en WP4)
+# Voor ieder vak is het resultaat bekend. De student heeft een "onvoldoende", een "voldoende", een "goed" of een "uitstekend" gescored.
+# We noemen een student "excellent" als hij meer dan één uitstekend heeft of als alle resultaten beter dan "voldoende" zijn.
+# We gaan een rapport maken om aan het einde van het jaar aan de onderwijscoordinator te sturen, met de volgende informatie:
+
+# We noemen een student "excellent" als hij meer dan één uitstekend heeft of als alle resultaten beter dan "voldoende" zijn. Welke studenten zijn excellent?
+# Welke klas(sen) hebben het hoogste percentage "excellent" studenten?
+# Welke klas heeft gemiddeld genomen over alle vakken de hoogste scores? Dit is een lastige. Stel voor het gemak dat een onvoldoende = 0 punten, voldoende 2 punten, goed 3 punten en uitstekend 4 punten.
+# Gegeven diezelfde manier van scoren: studenten met een score van 3 of minder punten moeten een inhaal opdracht doen. Welke studenten zijn dat en wat zijn hun resultaten?
+# Maak gebruik van de volgende functies voor de vier onderzoeksvragen en bedenk dat je jouw dataset waarschijnlijk eerst in verschillende varianten zult moeten omzetten. Bedenk ook dat als je code aan het herhalen bent, dat je dan waarschijnlijk een functie kunt maken.
+def get_excellent_students(list_of_students):
+    ...
+
+def get_most_excellent_classroom(list_of_classrooms):
+    ...
+
+def get_best_scoring_classroom(list_of_classrooms):
+    ...
+
+def get_failed_students(list_of_students, minimum_score = 4):
+    ...
+
+# Je kunt optioneel een dataset genereren met de code in generate_fake_students.py. Nadat je succesvol een bestand hebt weggeschreven importeer je het resultaat met het volgende commando boven in je Python bestand:
+from students_classrooms import students_per_classroom
 
 
 
