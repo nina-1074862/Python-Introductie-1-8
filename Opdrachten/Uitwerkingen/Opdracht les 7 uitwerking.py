@@ -97,7 +97,7 @@ while True:
             break
 
         elif operator == '-':
-            print(input1, "-", input2, "=", subtract(input1, input2))
+            print(input1, "-", input2, "=", substract(input1, input2))
             break
 
         elif operator == '*':
@@ -115,8 +115,6 @@ while True:
 # Je kunt een functie argument een standaard waarde geven. Als je de functie aanroept zonder dat argument, dan wordt de standaard waarde gebruikt. Bijvoorbeeld:
 def print_hello(name='John'):
     print(f'Hello {name}')
-
-
 print_hello()  # drukt "Hello John" af
 print_hello('Jane')  # drukt "Hello Jane" af
 
@@ -125,6 +123,71 @@ print_hello('Jane')  # drukt "Hello Jane" af
 add(1, 2, True) # drukt "Debug: 1 + 2" en daarna "3" af
 add(1, 2) # drukt "3" af
 # Voeg een vraag toe voor de gebruiker om te vragen of hij debug informatie wil zien.
+
+# Mijn uitwerking Opdracht: Rekenmachine met extra output
+def add(x,y, debug=False):
+    if debug:
+        print(f"Debug: {x} + {y}")
+        if x == 0 or y == 0:
+            print("Waarschuwing: één van de getallen is 0!")
+    return x + y
+
+def substract(x,y, debug=False):
+    if debug:
+        print(f"Debug: {x} - {y}")
+        if x == 0 or y == 0:
+            print('Waarschuwing: één van de getallen is 0!')
+    return x - y
+
+def multiply(x,y, debug=False):
+    if debug:
+        print(f"Debug: {x} * {y}")
+        if x == 0 or y == 0:
+            print('Waarschuwing: één van de getallen is 0%')
+    return x * y
+
+def divide(x, y, debug=False):
+    if debug:
+        print(f"Debug: {x} / {y}")
+        if x == 0 or y == 0:
+            print('Waarschuwing: één van de getallen is 0%')
+    return x / y
+
+while True:
+    # take input from the user
+    operator = input('Geef de operator (+, -, * of /): ')
+    debug_ask = input("Do you want to see the debug information? [Yes/No] ")
+    debug = False
+    if debug_ask.lower() == 'YES':
+        debug = True
+
+    # check if choice is one of the four options
+    if operator in ('+', '-', '*', '/'):
+        try:
+            input1 = float(input("Geef het eerste getal: "))
+            input2 = float(input("Geef het tweede getal: "))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+
+        if operator == '+':
+            print(input1, "+", input2, "=", add(input1, input2, debug))
+            break
+
+        elif operator == '-':
+            print(input1, "-", input2, "=", substract(input1, input2, debug))
+            break
+
+        elif operator == '*':
+            print(input1, "*", input2, "=", multiply(input1, input2, debug))
+            break
+
+        elif operator == '/':
+            print(input1, "/", input2, "=", divide(input1, input2, debug))
+            break
+    else:
+        print("Invalid Input")
+        exit()
 
 # Functie met return waarde
 # Een functie kan een waarde teruggeven. Dit doe je met het return statement. Bijvoorbeeld:
