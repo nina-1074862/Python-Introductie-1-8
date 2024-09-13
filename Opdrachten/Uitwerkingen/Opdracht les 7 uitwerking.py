@@ -1,32 +1,10 @@
 # Opdracht Les 7 Uitwerking (nina-1074862)
 
-# Opdracht: Rekenmachine
-    # We gaan een simpele rekenmachine maken die de volgende functies heeft:
-
-    # add telt twee getallen bij elkaar op en drukt het resultaat af
-    # subtract trekt twee getallen van elkaar af en drukt het resultaat af
-    # multiply vermenigvuldigt twee getallen met elkaar en drukt het resultaat af
-    # divide deelt twee getallen door elkaar en drukt het resultaat af
-    # De functies moeten als volgt werken:
-
-    # add(1, 2) drukt 3 af
-    # subtract(1, 2) drukt -1 af
-    # multiply(1, 2) drukt 2 af
-    # divide(1, 2) drukt 0.5 af
-# daarnaast moet de rekenmachine ook nog een functie hebben die de gebruiker vraagt om twee getallen en een operator, en vervolgens de juiste functie aanroept. Bijvoorbeeld:
-
-# Let wel, hier gebeurt nog iets bijzonders. De functie input geeft een string terug en daar kunnen we niet mee rekenen. Voer bijvoorbeeld de volgende code uit:
-
-# We moeten dus de string omzetten naar een getal. Dat kan met de functie int of float. Bijvoorbeeld:
-input1 = input('Geef het eerste getal: ')
-number1 = int(input1)
-print(number1 + number1)  # drukt "2" af
-
 # Mijn uitwerking Opdracht: Rekenmachine
 def add(x,y):
     return x + y
 
-def substract(x,y):
+def subtract(x,y):
     return x - y
 
 def multiply(x,y):
@@ -53,7 +31,7 @@ while True:
             break
 
         elif operator == '-':
-            print(input1, "-", input2, "=", substract(input1, input2))
+            print(input1, "-", input2, "=", subtract(input1, input2))
             break
 
         elif operator == '*':
@@ -67,17 +45,6 @@ while True:
         print("Invalid Input")
         exit()
 
-# Functies met standaard waarden
-# Je kunt een functie argument een standaard waarde geven. Als je de functie aanroept zonder dat argument, dan wordt de standaard waarde gebruikt. Bijvoorbeeld:
-def print_hello(name='John'):
-    print(f'Hello {name}')
-print_hello()  # drukt "Hello John" af
-print_hello('Jane')  # drukt "Hello Jane" af
-
-# Opdracht: Rekenmachine met extra output
-# Pas de functies van de rekenmachine aan om een derde waarde te accepteren, "debug", met een standaard waarde van False. Als de waarde True is, druk dan naast het antwoord de hele som af én een waarschuwing als één van de getallen een 0 is. Bijvoorbeeld:
-# Voeg een vraag toe voor de gebruiker om te vragen of hij debug-informatie wil zien.
-
 # Mijn uitwerking Opdracht: Rekenmachine met extra output
 
 def add(x,y, debug=False):
@@ -87,7 +54,7 @@ def add(x,y, debug=False):
             print("Waarschuwing: één van de getallen is 0!")
     return x + y
 
-def substract(x,y, debug=False):
+def subtract(x,y, debug=False):
     if debug:
         print(f"Debug: {x} - {y}")
         if x == 0 or y == 0:
@@ -130,7 +97,7 @@ while True:
             break
 
         elif operator == '-':
-            print(input1, "-", input2, "=", substract(input1, input2, debug))
+            print(input1, "-", input2, "=", subtract(input1, input2, debug))
             break
 
         elif operator == '*':
@@ -144,38 +111,7 @@ while True:
         print("Invalid Input")
         exit()
 
-# Functie met return waarde
-# Een functie kan een waarde teruggeven. Dit doe je met het return statement. Bijvoorbeeld:
-def add(a, b):
-    return a + b
-
-result = add(1, 2)
-print(result)
-
-# Functie argumenten op naam
-# Wat in praktijk veel zal gebeuren is dat je een functie aanroept met een heleboel argumenten. Bijvoorbeeld:
-def print_person(name, age, city, country):
-    print(f'{name} is {age} jaar oud en woont in {city}, {country}')
-
-print_person('John', 42, 'Rotterdam', 'Nederland')
-
-# Lastig is dat als je nu in jouw functie een extra argument toevoegt, "achternaam" bijvoorbeeld, dat je al je functie aanroepen moet aanpassen. Dat is niet handig. En dat niet alleen, op een gegeven moment weet je niet meer welke volgorde de argumenten hebben. Dat is niet handig.
-
-# Je kunt argumenten ook op naam meegeven. Bijvoorbeeld:
-def print_person(name, age, city, country):
-    print(f'{name} is {age} jaar oud en woont in {city}, {country}')
-
-print_person(name='John', age=42, city='Rotterdam', country='Nederland')
-# als we nu een extra argument toevoegen, dan hoeven we de aanroep niet aan te passen.
-
-# Opdracht: Refactoring
-# "Refactoring" is een kreet die je nog veel zult tegenkomen. Refactoring slaat op het herschrijven van code, zonder dat de input of output verandert. Dat doe je vaak omdat je de code beter leesbaar wilt maken, of omdat je de code wilt hergebruiken.
-# We gaan de code van een vorige opdracht refactoren. Als je onze uitwerking bekijkt van Les3_Source5.py zijn daar een paar zaken niet heel netjes:
-# We vragen gebruikers steeds te kiezen uit een aantal zaken ("KOUD of WARM"), maar die keuze dwingen we niet af. Je kunt nog steeds "LAUW" invoeren waar "KOUD" of "WARM" verwacht wordt. We willen die keuze afdwingen, dat kan bijvoorbeeld met een while loop:
-
 # Mijn uitwerking Opdracht: Refactoring
-# Ordering at Mac Donald's
-# Bestelling bij de FastFood Restaurant
 dine_in = False
 cancelled = False
 
@@ -186,7 +122,6 @@ def format_valid_options(options):
     if len(options) > 0:
         options_text = " [" + SEPARATOR.join(options) + "]"
     return options_text
-
 
 def ask_user(question, options=()):
     # Maakt een lijst met de opties in hoofdletters
@@ -202,7 +137,6 @@ def ask_user(question, options=()):
 
     return user_input
 
-
 def dine_in_or_takeout():
     # Vraagt of de gebruiker in het restaurant wil eten of afhalen
     dining_choice = ask_user("Eet je hier of neem je mee?", ["Hier", "Mee"])
@@ -213,7 +147,6 @@ def dine_in_or_takeout():
         print("Afhalen")
         return False
 
-
 def choose_burger():
     # Laat de gebruiker een burger kiezen
     burger_choice = ask_user(
@@ -221,12 +154,10 @@ def choose_burger():
     )
     print(f"Je hebt gekozen voor een {burger_choice}")
 
-
 def choose_hot_drink():
     # Laat de gebruiker een warme drank kiezen
     hot_drink_choice = ask_user("Welke warme drank wil je?", ["Koffie", "Cappuccino", "Chocolademelk"])
     print(f"Je hebt gekozen voor een {hot_drink_choice}")
-
 
 def choose_cold_drink():
     # Laat de gebruiker een koude drank kiezen
@@ -234,7 +165,6 @@ def choose_cold_drink():
         "Welke koude drank wil je?", ["Coca Cola", "Cola Zero", "7-Up", "Fanta", "Fristi"]
     )
     print(f"Je hebt gekozen voor een {cold_drink_choice}")
-
 
 def place_order():
     # Vraag of de gebruiker eten of drinken wil
@@ -249,7 +179,6 @@ def place_order():
         else:
             choose_cold_drink()
 
-
 # Hoofdprogramma
 def main():
     print("Welkom bij MacDonald's")
@@ -262,14 +191,158 @@ def main():
     else:
         print("Bedankt voor je bestelling, veilige reis en smakelijk eten!")
 
-
 # Start het programma
 if __name__ == "__main__":
     main()
 
 # Mijn uitwerking Opdracht: Studenten rapport
-classes = dictionary['SWDVT-2023-1A', ]
+date_of_rapport = "02-09-2023"
 
-# Je kunt optioneel een dataset genereren met de code in generate_fake_students.py. Nadat je succesvol een bestand hebt weggeschreven importeer je het resultaat met het volgende commando boven in je Python bestand:
-# from students_classrooms import students_per_classroom
+students_per_classroom = {
+    "SWDVT-2023-1A": [
+        {
+            "naam": "Celina van den Boom",
+            "resultaten": {
+                "WP1": "uitstekend",
+                "WP2": "voldoende",
+                "WP3": "uitstekend",
+                "WP4": "voldoende",
+            },
+        },
+        {
+            "naam": "Kees van der Spek",
+            "resultaten": {
+                "WP1": "goed",
+                "WP2": "goed",
+                "WP3": "goed",
+                "WP4": "goed",
+            },
+        },
+    ],
+    "SWDVT-2023-1B": [
+        {
+            "naam": "Peter de Vries",
+            "resultaten": {
+                "WP1": "onvoldoende",
+                "WP2": "voldoende",
+                "WP3": "voldoende",
+                "WP4": "onvoldoende",
+            },
+        },
+        {
+            "naam": "Cindy Visser",
+            "resultaten": {
+                "WP1": "voldoende",
+                "WP2": "uitstekend",
+                "WP3": "goed",
+                "WP4": "voldoende",
+            },
+        },
+    ],
+}
 
+def get_excellent_students(list_of_students):
+    excellent = False
+    excellent_count = 0
+    no_low_grade = True
+
+    for result in student["resultaten"]:
+        if student["resultaten"][result] == "uitstekend":
+            excellent_count += 1
+        if (
+                student["resultaten"][result] == "onvoldoende"
+                or student["resultaten"][result] == "voldoende"
+        ):
+            no_low_grades = False
+
+    if no_low_grades or excellent_count > 1:
+        excellent = True
+
+    return excellent
+
+
+def get_excellent_students(students):
+    excellent_students = []
+    for student in students:
+        if get_is_student_excellent(student):
+            excellent_students.append(student)
+    return excellent_students
+
+
+def get_most_excellent_classroom(students_per_classroom):
+    best_classroom = None
+    best_classroom_count = -1
+    for classroom in students_per_classroom:
+        excellent_students = get_excellent_students(students_per_classroom[classroom])
+        if len(excellent_students) > best_classroom_count:
+            best_classroom = classroom
+            best_classroom_count = len(excellent_students)
+        elif len(excellent_students) == best_classroom_count:
+            best_classroom = f"{best_classroom}, {classroom}"
+    return best_classroom
+
+
+def calculate_score_per_student(student):
+    score = 0
+    for result in student["resultaten"]:
+        if student["resultaten"][result] == "uitstekend":
+            score += 3
+        if student["resultaten"][result] == "goed":
+            score += 2
+        if student["resultaten"][result] == "voldoende":
+            score += 1
+    return score
+
+
+def get_best_scoring_classroom(students_per_classroom):
+    best_classroom = ""
+    best_classroom_score = 0
+    for classroom in students_per_classroom:
+        classroom_score = 0
+        for student in students_per_classroom[classroom]:
+            classroom_score += calculate_score_per_student(student)
+        if classroom_score > best_classroom_score:
+            best_classroom = classroom
+            best_classroom_score = classroom_score
+        elif classroom_score == best_classroom_score:
+            best_classroom = f"{best_classroom}, {classroom}"
+    return best_classroom
+
+
+def get_failed_students(students, min_score=3):
+    failed_students = []
+    for student in students:
+        score = calculate_score_per_student(student)
+        if score < min_score:
+            student["score"] = score
+            failed_students.append(student)
+    return failed_students
+
+def full_rapport(list_of_students):
+    all_students = []
+    for classroom in list_of_students:
+        for student in list_of_students[classroom]:
+            all_students.append(student)
+
+    print(f"------ Rapport {date_of_rapport} ------")
+    print("Excellente studenten:")
+    excellent_students = get_excellent_students(all_students)
+    for student in excellent_students:
+        print(f'\t{student["naam"]}')
+
+    print("Klas met de meest excellente studenten:")
+    best_classroom = get_most_excellent_classroom(students_per_classroom)
+    print(f"\t{best_classroom}")
+
+    print("Klas met de hoogste scores gemiddeld:")
+    best_classroom = get_best_scoring_classroom(students_per_classroom)
+    print(f"\t{best_classroom}")
+
+    print("Studenten met inhaalopdracht:")
+    failed_students = get_failed_students(all_students)
+    for student in failed_students:
+        print(f'\t{student["naam"]}')
+    for subject, result in student["resultaten"].items():
+        print(f"\t\t{subject}: {result}")
+
+full_rapport(students_per_classroom)
