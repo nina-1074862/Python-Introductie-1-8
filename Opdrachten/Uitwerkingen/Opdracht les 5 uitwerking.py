@@ -41,33 +41,79 @@ for row in bingo_numbers_card:
 
 # Mijn uitwerking: BINGO Opdracht 2:
 import random
-# Totaal aantal getallen op de kaart zal hoogte x breedte zijn
+
 total_bingo_numbers = 4 ** 2
-# Daarna maken we een lijst met 99 getallen waar we uit gaan kiezen
 numbers_all = list(range(1, 100))
-# We gooien alle ballen door elkaar
 random.shuffle(numbers_all)
 # en pakken de eerste 16 getallen
-bingo_numbers2 = numbers_all[:total_bingo_numbers]
-bingo_numbers_card = [
-    bingo_numbers2[:4],
-    bingo_numbers2[4:8],
-    bingo_numbers2[8:12],
-    bingo_numbers2[12:]
+bingo_numbers = numbers_all[:total_bingo_numbers]
+bingo_card = [
+    bingo_numbers[:4],
+    bingo_numbers[4:8],
+    bingo_numbers[8:12],
+    bingo_numbers[12:]
 ]
-for row in bingo_numbers_card:
+
+drawn_numbers = random.sample(range(1, 76), 50)
+
+for i in range(4):
+    for j in range(4):
+        if bingo_card[i][j] in drawn_numbers:
+            bingo_card[i][j] = 0
+
+print("\nUpdated Bingo Card:")
+for row in bingo_card:
     print([', ' .join(map(str, row))])
 
 # Mijn uitwerking: BINGO Opdracht 3:
+import random
+
+total_bingo_numbers = 4 ** 2
+numbers_all = list(range(1, 100))
+random.shuffle(numbers_all)
+bingo_numbers = numbers_all[:total_bingo_numbers]
+bingo_card = [
+    bingo_numbers[:4],
+    bingo_numbers[4:8],
+    bingo_numbers[8:12],
+    bingo_numbers[12:]
+]
+
+drawn_numbers = random.sample(range(1, 76), 50)
+
+print("\nUpdated Bingo Card:")
+for row in bingo_card:
+    print([', ' .join(map(str, row))])
+
+for i in range(4):
+    for j in range(4):
+        if bingo_card[i][j] in drawn_numbers:
+            bingo_card[i][j] = 0
+
+def check_bingo(card):
+    for row in bingo_card:
+        if sum(row) == 0:
+            return True
+
+    for col in range(4):
+        if sum(card[row][col] for row in range(4)) == 0:
+            return True
+
+    return False
+
+if check_bingo(bingo_card):
+    print("Bingo!")
+else:
+    print("No Bingo yet.")
 
 # Mijn uitwerking: While loops Opdracht 1:
 numbers_all = list(range(1, 100))
 
-def priemgetal(number):
-        if number < 2:
+def priemgetal(n):
+        if n < 2:
             return False
-        for i in range(2, number):
-            if number % i == 0:
+        for i in range(2, n):
+            if n % i == 0:
                 return False
         return True
 
