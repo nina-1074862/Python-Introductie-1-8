@@ -1,14 +1,15 @@
-# Declaration of Independent Work
+# Software Development-2024-2025
 
-I [nina-1074862], hereby declare that all coding assignments submitted by me have been completed independently, without assistance from others. I have not copied or used any code from external sources without proper citation. I have made this effort to accelerate my learning process in Python and to adhere to the academic integrity guidelines.
+This repository contains coursework and projects for my Software Development class in the academic year 2024-2025.
 
-# Python lessen IT-Domein
-## Python 1
-De website voor de Python lessen met filmpjes is te vinden op [https://project.hosted.hr.nl/rac/it/python/](https://project.hosted.hr.nl/rac/it/python/)
+## Python Lessons and Videos
+The website for the Python lessons with videos can be found at [https://project.hosted.hr.nl/rac/it/python/](https://project.hosted.hr.nl/rac/it/python/)
 
-## Opbouw van de Python lessen
-De onderwerpen van de lessen worden in korte videoclips weergegeven. Daarbij verteld een voice-over wat er gebeurt en zijn er voor bepaalde onderwerpen animaties die de wat abstractere onderwerpen visueel weergeven. 
+## Structure of the Python Lessons
+The topics of the lessons are presented in short video clips. A voice-over explains what is happening, and for certain topics, animations visually represent more abstract concepts.
 
+## Contents
+Python lessen IT-Domein
 De lessen bestaan uit de volgende blokken:
 - Les 1: Introduction
     - Wat is Python?
@@ -41,29 +42,23 @@ De lessen bestaan uit de volgende blokken:
     - Scope
     - Globale variabelen
 
-Bij elke les zijn er een aantal opdrachten die vervuld moeten worden. De uitwerking is ook beschikbaar, maar we raden je zeer sterk aan om eerst zelf aan de slag te gaan en pas naar de uitwerking te kijken als je klaar bent, óf als je vast loopt en er geen docent of mede student beschikbaar is om je verder te helpen. Een overzicht van de lesstof en opdrachten: 
+An overview of the lesson materials and assignments:
 
-| Les                | URL | Opdracht                                            |
-|--------------------| --- |-----------------------------------------------------|
-| Les 1: Welkom      | https://project.hosted.hr.nl/rac/it/python/ | [Opdracht_les_1.md](Opdrachten%2FOpdracht_les_1.md) |
+| Les                | URL                                                                  | Opdracht                                            |
+|--------------------| ---------------------------------------------------------------------|                                                     |
+| Les 1: Welkom      | https://project.hosted.hr.nl/rac/it/python/                          | [Opdracht_les_1.md](Opdrachten%2FOpdracht_les_1.md) |
 | Les 2: Datatypes   | https://project.hosted.hr.nl/rac/it/python/les-2-wat-zijn-datatypen/ | [Opdracht_les_2.md](Opdrachten%2FOpdracht_les_2.md) |
-| Les 3: Condities   | https://project.hosted.hr.nl/rac/it/python/les-3-condities/ | [Opdracht_les_3.md](Opdrachten%2FOpdracht_les_3.md) |
-| Les 4: Collections | https://project.hosted.hr.nl/rac/it/python/les-4-collections/ | [Opdracht_les_4.md](Opdrachten%2FOpdracht_les_4.md) |
-| Les 5: Loops       | https://project.hosted.hr.nl/rac/it/python/les-5-loops/ | [Opdracht_les_5.md](Opdrachten%2FOpdracht_les_5.md) |
-| Les 7: Functies    |  | [Opdracht_les_7.md](Opdrachten%2FOpdracht_les_7.md) |
-| Les 8: Scope       |  | [Opdracht_les_8.md](Opdrachten%2FOpdracht_les_8.md) |
+| Les 3: Condities   | https://project.hosted.hr.nl/rac/it/python/les-3-condities/          | [Opdracht_les_3.md](Opdrachten%2FOpdracht_les_3.md) |
+| Les 4: Collections | https://project.hosted.hr.nl/rac/it/python/les-4-collections/        | [Opdracht_les_4.md](Opdrachten%2FOpdracht_les_4.md) |
+| Les 5: Loops       | https://project.hosted.hr.nl/rac/it/python/les-5-loops/              | [Opdracht_les_5.md](Opdrachten%2FOpdracht_les_5.md) |
+| Les 7: Functies    | no-url                                                               | [Opdracht_les_7.md](Opdrachten%2FOpdracht_les_7.md) |
+| Les 8: Scope       | no-url                                                               | [Opdracht_les_8.md](Opdrachten%2FOpdracht_les_8.md) |
 
+## Future Updates?
+Probably not, as I have completed all 8 lessons. I will only update for minor improvements if needed.
 
-Hoewel de opdrachten niet allemaal af moeten vragen we je verderop in Werkplaats 1 te laten zien hoever je bent gekomen en waar je problemen mee had. Als je er niet uit komt is het dus verstandig om contact op te nemen met je docent vóórdat je begint aan de eerste werkplaats les!
+## Contributions
+Feel free to open issues or submit pull requests if you have suggestions or improvements. (I'm still learning from my past mistakes)
 
-## Werken met Pycharm
-In de lessen wordt gebruik gemaakt van Pycharm. Pycharm is een IDE (Integrated Development Environment) die speciaal is ontwikkeld voor Python. Het is een krachtige tool die je helpt bij het programmeren. Je kunt Pycharm downloaden van [https://www.jetbrains.com/pycharm/](https://www.jetbrains.com/pycharm/).
-
-Waarschijnlijk lees je deze tekst nu op github.com. Het is makkelijker voor jezelf om de repository te clonen naar je eigen computer en dat kan direct met Pycharm, als volgt:
-1) Zoek de .git URL van deze repository op. Dat kan door op de groene knop "Code" te klikken en de URL te kopieren.
-![pycharm_github_url.png](Opdrachten%2FImages%2Fpycharm_github_url.png)
-
-2) Open Pycharm. Als je al een project hebt geopend kun je een nieuw project openen door op "File" -> "New Project" te klikken. Als je al eerder een project hebt geopend kun je met File -> "Project from version control" dit project naar jouw eigen systeem kopiëren. Heb je nog niet eerder een project geopend, dan kun je via "Get from VCS" direct de URL plakken in het veld "URL":
-![pycharm_zonder_project.png](Opdrachten%2FImages%2Fpycharm_zonder_project.png)
-
-Probeer voor het opslaan op jouw lokale systeem een generieke map te maken voor alle projecten. Er zullen er dit jaar nog een hoop meer volgen. 
+## Declaration of Independent Work
+I hereby declare that all coding assignments submitted by me have been completed independently, without assistance from others. I have not copied or used any code from external sources without proper citation. I have made this effort to accelerate my learning process in Python and to adhere to the academic integrity guidelines.
