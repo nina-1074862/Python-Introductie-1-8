@@ -1,9 +1,6 @@
 # Opdracht Les 1 Uitwerking (nina-1074862) FYI I haven't worked with python in months so pls don't laugh lmao
 
-# Standaard rekenoperatoren
-# Maak de volgende berekeningen en denk bij elke berekening na over het te verwachten resultaat. Voer de berekeningen uit in de REPL of in je IDE en kijk of het resultaat overeenkomt met je verwachting:
-
-# Print x for output
+# Mijn uitwerking: Opdracht 1 (Standaard Rekenoperatoren)
 x = (2 + 3)
 print(x)
 
@@ -40,8 +37,7 @@ print(x)
 x = (3 ** 2)
 print(x)
 
-# Haakjes
-# Print x for output
+# Mijn uitwerking: Opdracht 2 (Haakjes)
 x = (23.95 * 32.9)
 print(x)
 
@@ -66,7 +62,7 @@ print(x)
 x = (23.95 / (32.9 + 6))
 print(x)
 
-# Variabelen
+# Mijn uitwerking: Opdracht 3 (Variabelen)
 name = "John Doe"
 print(name)
 
@@ -94,8 +90,7 @@ line_character = '-'
 line = line_character * 20
 print(line)
 
-# Combineren
-# Je kunt variabelen combineren met tekst. Dit heet een formatted string. Je kunt dit doen met de f-string notatie. Hierbij zet je een f voor de string en kun je variabelen tussen accolades zetten. Python vervangt de variabelen dan met de waarde van de variabele.
+# Mijn uitwerking: Opdracht 4 (Combineren)
 city = 'Rotterdam'
 print(city)
 type(city)
@@ -108,5 +103,4 @@ area = 324.1
 print(area)
 type(area)
 
-# Formatted string, variabele in string weergeven
 print(f'The city of {city} has {residents} on an area of {area} square kilometers')
