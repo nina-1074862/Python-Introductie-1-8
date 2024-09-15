@@ -1,6 +1,6 @@
 # Opdracht Les 8 Uitwerking (nina-1074862)
 
-# Mijn uitwerking Opdracht 8: Caching
+# Mijn uitwerking Opdracht 1 (Caching):
 import time
 
 def zeef_van_eratosthenes(limit):
