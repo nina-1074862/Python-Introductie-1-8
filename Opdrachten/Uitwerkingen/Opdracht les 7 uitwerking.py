@@ -121,7 +121,7 @@ def format_valid_options(options):
     # Formatteert de lijst met opties als een string om aan de gebruiker te tonen
     if len(options) > 0:
         options_text = " [" + SEPARATOR.join(options) + "]"
-    return options_text
+        return options_text
 
 def ask_user(question, options=()):
     # Maakt een lijst met de opties in hoofdletters
@@ -198,7 +198,7 @@ if __name__ == "__main__":
 # Mijn uitwerking Opdracht: Studenten rapport
 date_of_rapport = "02-09-2023"
 
-students_per_classroom = {
+list_of_students = {
     "SWDVT-2023-1A": [
         {
             "naam": "Celina van den Boom",
@@ -241,21 +241,21 @@ students_per_classroom = {
     ],
 }
 
-def get_excellent_students(list_of_students):
+def get_is_excellent_students(student):
     excellent = False
-    excellent_count = 0
+    excellent_counter = 0
     no_low_grade = True
 
     for result in student["resultaten"]:
         if student["resultaten"][result] == "uitstekend":
-            excellent_count += 1
+            excellent_counter += 1
         if (
                 student["resultaten"][result] == "onvoldoende"
                 or student["resultaten"][result] == "voldoende"
         ):
-            no_low_grades = False
+            no_low_grade = False
 
-    if no_low_grades or excellent_count > 1:
+    if no_low_grade or excellent_counter > 1:
         excellent = True
 
     return excellent
@@ -264,16 +264,16 @@ def get_excellent_students(list_of_students):
 def get_excellent_students(students):
     excellent_students = []
     for student in students:
-        if get_is_student_excellent(student):
+        if get_is_excellent_students(student):
             excellent_students.append(student)
     return excellent_students
 
 
-def get_most_excellent_classroom(students_per_classroom):
+def get_most_excellent_classroom(list_of_students):
     best_classroom = None
     best_classroom_count = -1
-    for classroom in students_per_classroom:
-        excellent_students = get_excellent_students(students_per_classroom[classroom])
+    for classroom in list_of_students:
+        excellent_students = get_excellent_students(list_of_students[classroom])
         if len(excellent_students) > best_classroom_count:
             best_classroom = classroom
             best_classroom_count = len(excellent_students)
@@ -294,12 +294,12 @@ def calculate_score_per_student(student):
     return score
 
 
-def get_best_scoring_classroom(students_per_classroom):
+def get_best_scoring_classroom(list_of_students):
     best_classroom = ""
     best_classroom_score = 0
-    for classroom in students_per_classroom:
+    for classroom in list_of_students:
         classroom_score = 0
-        for student in students_per_classroom[classroom]:
+        for student in list_of_students[classroom]:
             classroom_score += calculate_score_per_student(student)
         if classroom_score > best_classroom_score:
             best_classroom = classroom
@@ -328,21 +328,21 @@ def full_rapport(list_of_students):
     print("Excellente studenten:")
     excellent_students = get_excellent_students(all_students)
     for student in excellent_students:
-        print(f'\t{student["naam"]}')
+        print(f'\t-{student["naam"]}')
 
     print("Klas met de meest excellente studenten:")
-    best_classroom = get_most_excellent_classroom(students_per_classroom)
-    print(f"\t{best_classroom}")
+    best_classroom = get_most_excellent_classroom(list_of_students)
+    print(f"\t-{best_classroom}")
 
     print("Klas met de hoogste scores gemiddeld:")
-    best_classroom = get_best_scoring_classroom(students_per_classroom)
-    print(f"\t{best_classroom}")
+    best_classroom = get_best_scoring_classroom(list_of_students)
+    print(f"\t-{best_classroom}")
 
     print("Studenten met inhaalopdracht:")
     failed_students = get_failed_students(all_students)
     for student in failed_students:
-        print(f'\t{student["naam"]}')
+        print(f'-\t{student["naam"]}')
     for subject, result in student["resultaten"].items():
         print(f"\t\t{subject}: {result}")
 
-full_rapport(students_per_classroom)
+full_rapport(list_of_students)
