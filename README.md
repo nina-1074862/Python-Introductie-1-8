@@ -44,15 +44,15 @@ Python Lessons IT-Domain The lessons consist of the following blocks:
 
 An overview of the lesson materials and assignments:
 
-| Les                | URL                                                                  | Opdracht                                            |
-|--------------------| ---------------------------------------------------------------------|                                                     |
-| Les 1: Welkom      | https://project.hosted.hr.nl/rac/it/python/                          | [Opdracht_les_1.md](Opdrachten%2FOpdracht_les_1.md) |
-| Les 2: Datatypes   | https://project.hosted.hr.nl/rac/it/python/les-2-wat-zijn-datatypen/ | [Opdracht_les_2.md](Opdrachten%2FOpdracht_les_2.md) |
-| Les 3: Condities   | https://project.hosted.hr.nl/rac/it/python/les-3-condities/          | [Opdracht_les_3.md](Opdrachten%2FOpdracht_les_3.md) |
-| Les 4: Collections | https://project.hosted.hr.nl/rac/it/python/les-4-collections/        | [Opdracht_les_4.md](Opdrachten%2FOpdracht_les_4.md) |
-| Les 5: Loops       | https://project.hosted.hr.nl/rac/it/python/les-5-loops/              | [Opdracht_les_5.md](Opdrachten%2FOpdracht_les_5.md) |
-| Les 7: Functies    | no-url                                                               | [Opdracht_les_7.md](Opdrachten%2FOpdracht_les_7.md) |
-| Les 8: Scope       | no-url                                                               | [Opdracht_les_8.md](Opdrachten%2FOpdracht_les_8.md) |
+| Les                | URL | Opdracht                                            |
+|--------------------| --- |-----------------------------------------------------|
+| Les 1: Introduction      | https://project.hosted.hr.nl/rac/it/python/ | [Opdracht_les_1.md](Opdrachten%2FOpdracht_les_1.md) |
+| Les 2: Data types   | https://project.hosted.hr.nl/rac/it/python/les-2-wat-zijn-datatypen/ | [Opdracht_les_2.md](Opdrachten%2FOpdracht_les_2.md) |
+| Les 3: Conditions   | https://project.hosted.hr.nl/rac/it/python/les-3-condities/ | [Opdracht_les_3.md](Opdrachten%2FOpdracht_les_3.md) |
+| Les 4: Collections | https://project.hosted.hr.nl/rac/it/python/les-4-collections/ | [Opdracht_les_4.md](Opdrachten%2FOpdracht_les_4.md) |
+| Les 5: Loops       | https://project.hosted.hr.nl/rac/it/python/les-5-loops/ | [Opdracht_les_5.md](Opdrachten%2FOpdracht_les_5.md) |
+| Les 7: Functions    |  | [Opdracht_les_7.md](Opdrachten%2FOpdracht_les_7.md) |
+| Les 8: Scope       |  | [Opdracht_les_8.md](Opdrachten%2FOpdracht_les_8.md) |
 
 ## Future Updates?
 Probably not, as I have completed all 8 lessons. I will only update for minor improvements if needed.
