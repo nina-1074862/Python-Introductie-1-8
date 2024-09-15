@@ -1,13 +1,10 @@
 # Opdracht Les 3 Uitwerking (nina-1074862)
 
-#Input vragen
-# Met de functie input() kan je input van de gebruiker vragen. Dit ziet eruit als:
+# Mijn uitwerking: Opdracht 1 (Input vragen)
 age_str = input('What is your age? ')
 print(f'Your age is {age_str}')
 
-# De input()functie levert altijd een string terug, vandaar dat de variabele _str heeft meegekregen, om dit te benadrukken. Dit is overigens de enige plaats waarop deze toevoeging handig is.
-
-# Internet verbinding selectie
+# Mijn uitwerking: Opdracht 1 (Internet verbinding selectie)
 data_users = input('Welke verbinding wilt u gebruiken [4G, 5G, Wifi open]: ')
 if data_users == ("Wifi open" or "wifi open" or "WIFI OPEN"):
     print("U heeft voor de Wifi open gekozen, wij wijzen u erop dat de data door de eigenaar van dit netwerk is te lezen.")
@@ -21,8 +18,7 @@ else:
     print("Unknown input, there won't be any connection")
     exit()
 
-# Vergelijken met een sub-string
-# Controleren of een string als een substring in een string zit doe je middels het keyword in. Bijvoorbeeld:
+# Mijn uitwerking: Opdracht 1 (Vergelijken met een sub-string)
 print("Is Hello with a capital 'H' within the string 'Hello, everyone!'")
 if "Hello" in "Hello, everyone!":
     print('Yes, Hello is within the Hello, everyone! string')
@@ -33,9 +29,7 @@ if "hello" in "Hello, everyone!":
 else:
     print('No, hello with small letters is not within the string')
 
-# Flowchart
-# Opdracht: Maak een Python programma die onderstaande flowchart implementeert. Van alle elipsen/ronde/rechthoek symbolen print je de tekst van de flowchart. De diamanten zijn je if statements, waar je aan de gebruiker een input vraagt. Bijvoorbeeld: yes of no antwoord.
-
+# Mijn uitwerking: Opdracht 1 (Flowchart)
 print("Patient exposed to TB")
 adult_or_child = input('Is the patient an adult or a child? [Adult/Child] ')
 
@@ -82,9 +76,7 @@ else:
     print("Abort, unknown input.")
     exit()
 
-# Flowchart
-# Maak een Python programma die onderstaande flowchart implementeert. Van alle elipsen/ronde/rechthoek/rechthoekgolf symbolen print je de tekst van de flowchart. De diamanten zijn je if statements, waar je aan de gebruiker een input vraagt. Bijvoorbeeld: yes of no antwoord.
-
+# Mijn uitwerking: Opdracht 2 (Flowchart)
 print("Shopping Cart")
 payment_method = input("Payment Method? Online/Offline ")
 
@@ -130,30 +122,7 @@ else:
     print("Abort, Unknown input.")
     exit()
 
-# Bestellen
-# Eten bestellen bij de Mac Donald's. Maak een programma die aan de gebruiker de bestelling vraagt. De gebruiker kan slechts 1 keuze maken. Dat wil zeggen dat hij/zij slechts 1 burger of 1 drankje kan kiezen. De volgende vragen stel je aan de gebruiker:
-
-# Hier opeten of meenemen?
-# Burgers of drankjes?
-    # Burgers:
-        # Hamburger
-        # Cheese burger
-        # Big Mac
-        # Quarter Pounder met of zonder kaas?
-    # Drankjes:
-        # Warme of koude drankjes:
-            # Warme drankjes:
-            # Koffie
-            # Cappucino
-            # Chocolademelk
-        # Koude drankjes:
-            # Coca Cola
-            # Cola Zero
-            # 7-up
-            # Fanta
-            # Fristi
-# Elke keer als de gebruiker een bestelling kiest geef je deze op het scherm weer. Als de gebruiker "hier op eten" heeft gekozen, dan zeg je aan het einde: "Bedankt voor uw bestelling en eet smakelijk in ons restaurant." Als de gebruiker "Meenemen" heeft gekozen, dan zeg je aan het einde: "Bedankt voor uw bestelling, goede reis en eet smakelijk."
-
+# Mijn uitwerking: Opdracht 1 (Bestellen)
 print("Welkom bij de Mac Donald's ")
 takeaway_or_restaurant = input("Hier opeten of meenemen? [Opeten/Meenemen]: ")
 
