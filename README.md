@@ -9,38 +9,38 @@ The website for the Python lessons with videos can be found at [https://project.
 The topics of the lessons are presented in short video clips. A voice-over explains what is happening, and for certain topics, animations visually represent more abstract concepts.
 
 ## Contents
-Python lessen IT-Domein
-De lessen bestaan uit de volgende blokken:
-- Les 1: Introduction
-    - Wat is Python?
-    - Waar wordt het gebruikt?
-    - Hoe kom je eraan en waar programmeer je het mee?
-- Les 2: Datatypes
-    - Integer, gehele getallen.
-    - Floats, gebroken getallen.
-    - Strings, karakters en tekst.
-    - Boolean, True en False.
-    - Wat zijn dit voor dingen en wat kan je ermee?
-- Les 3: Conditions
-    - if/else constructies.
-    - Voorwaarden waaronder iets kan of mag gebeuren.
-    - Flow-Charts kunnen mappen naar if/else en andersom.
-- Les 4: Collections
-    - List, lijsten met data die gewijzigd mogen/kunnen worden.
-    - Tuple, lijsten met data die niet gewijzigd kunnen worden.
-    - Dictionary, key/value pairs waarmee data bewaard kan worden en waarbij wordt gegarandeerd dat een sleutel maar 1x voorkomt.
-- Les 5: Loops
-    - for, herhalingen door itereerbare typen bij een vooraf bekende lengte.
-    - while, herhalingen zolang de while conditie True oplevert.
-    - Herhalingen hoe bouw je ze op?
+Python Lessons IT-Domain The lessons consist of the following blocks:
+
+- Lesson 1: Introduction
+    - What is Python?
+    - Where is it used?
+    - How do you get it and what do you use to program with it?
+- Lesson 2: Data Types
+    - Integer, whole numbers.
+    - Floats, fractional numbers.
+    - Strings, characters and text.
+    - Boolean, True and False.
+    - What are these and what can you do with them?
+- Lesson 3: Conditions
+    - if/else constructs.
+    - Conditions under which something can or should happen.
+    - Flowcharts can be mapped to if/else and vice versa.
+- Lesson 4: Collections
+    - List, lists with data that can be modified.
+    - Tuple, lists with data that cannot be modified.
+    - Dictionary, key/value pairs used to store data with the guarantee that a key appears only once.
+- Lesson 5: Loops
+    - for, repetitions through iterable types with a predefined length.
+    - while, repetitions as long as the while condition is True.
+    - How to build loops?
     - break, continue keywords.
-- Les 7: Functies
-    - Functies.
-    - Standaard argumenten.
+- Lesson 7: Functions
+    - Functions.
+    - Default arguments.
     - Return values.
-- Les 8: Scope
+- Lesson 8: Scope
     - Scope
-    - Globale variabelen
+    - Global variables
 
 An overview of the lesson materials and assignments:
 
